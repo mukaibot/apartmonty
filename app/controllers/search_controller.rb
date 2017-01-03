@@ -1,7 +1,11 @@
 class SearchController < ApplicationController
-  def search
+  def apartment_search
     @apartments = Apartment.where(search_param).paginate(page: params[:page])
     render 'apartments/index'
+  end
+
+  def filter_search
+    render params[:filter]
   end
 
   private

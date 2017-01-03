@@ -1,0 +1,20 @@
+<h1>Recent apartments</h1>
+<% @apartments = Apartment.order(:updated_at).paginate(page: params[:page]) %>
+<table>
+<tr>
+  <th>Address</th>
+  <th>Price</th>
+  <th>Last updated</th>
+</tr>
+
+<% @apartments.each do |apartment| %>
+  <tr>
+    <td><%= apartment.address_line1%> <%= apartment.address_line2 %></td>
+    <td><%= apartment.price %></td>
+    <td><%= apartment.updated_at %></td>
+<% end %>
+
+</table>
+
+<br/>
+<%= will_paginate @apartments %>
