@@ -2,7 +2,7 @@ class ApartmentsController < ApplicationController
   before_action :set_apartment, only: [:show]
 
   def index
-    @apartments = Apartment.limit(25)
+    @apartments = Apartment.all.paginate(page: params[:page])
   end
 
   def show
