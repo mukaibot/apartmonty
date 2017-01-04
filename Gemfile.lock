@@ -129,6 +129,8 @@ GEM
     tilt (2.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.4)
+      execjs (>= 0.3.0, < 3)
     will_paginate (3.1.5)
 
 PLATFORMS
@@ -144,6 +146,7 @@ DEPENDENCIES
   rails (= 4.2.3)
   sass-rails (~> 5.0)
   sqlite3
+  uglifier
   will_paginate
 
 BUNDLED WITH
